@@ -1,0 +1,13 @@
+<form
+  *ngIf="display == true"
+  #PostForm="ngForm"
+  (ngSubmit)="postForm(PostForm)"
+>
+  <p>Title:</p>
+  <input name="title" ngModel />
+  <p>Thought:</p>
+  <input name="thought" ngModel />
+
+  <button>Submit</button>
+</form>
+<button (click)="toggleDisplay()">Add to post</button>
